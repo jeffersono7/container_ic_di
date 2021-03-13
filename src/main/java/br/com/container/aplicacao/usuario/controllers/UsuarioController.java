@@ -11,11 +11,13 @@ public class UsuarioController {
         this.service = service;
     }
 
-    public void criar() {
+    public Usuario criar() {
         var usuario = new Usuario(null, "jefferson", "jefferson@email.com", "password");
 
-        service.criar(usuario);
+        var usuarioSalvo = service.criar(usuario);
 
-        System.out.println(usuario);
+        System.out.println(usuarioSalvo);
+
+        return usuarioSalvo;
     }
 }
