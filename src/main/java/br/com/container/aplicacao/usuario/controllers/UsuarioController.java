@@ -2,7 +2,9 @@ package br.com.container.aplicacao.usuario.controllers;
 
 import br.com.container.aplicacao.usuario.Usuario;
 import br.com.container.aplicacao.usuario.services.UsuarioService;
+import br.com.container.framework.annotations.Component;
 
+@Component
 public class UsuarioController {
 
     private final UsuarioService service;

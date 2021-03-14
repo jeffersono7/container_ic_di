@@ -2,10 +2,12 @@ package br.com.container.aplicacao.usuario.repositories.memory;
 
 import br.com.container.aplicacao.usuario.Usuario;
 import br.com.container.aplicacao.usuario.repositories.UsuarioRepository;
+import br.com.container.framework.annotations.Component;
 
 import java.util.HashMap;
 import java.util.Map;
 
+@Component
 public class UsuarioMemoryRepository implements UsuarioRepository {
 
     private static int id = 0;
