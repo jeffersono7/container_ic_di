@@ -19,7 +19,7 @@ public class UsuarioMemoryRepository implements UsuarioRepository {
     }
 
     @Override
-    public Usuario salvar(Usuario usuario) {
+    synchronized public Usuario salvar(Usuario usuario) {
         var proximoId = usuario.getId();
 
         if (proximoId == null) {

@@ -5,7 +5,7 @@ import br.com.container.aplicacao.usuario.repositories.UsuarioRepository;
 import br.com.container.aplicacao.usuario.services.UsuarioService;
 import br.com.container.framework.annotations.Component;
 
-@Component
+@Component(scope = Component.Scope.PROTOTYPE)
 public class UsuarioServiceImpl implements UsuarioService {
 
     private final UsuarioRepository usuarioRepository;

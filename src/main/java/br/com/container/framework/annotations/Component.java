@@ -6,4 +6,15 @@ import java.lang.annotation.*;
 @Documented
 @Target(ElementType.TYPE)
 public @interface Component {
+
+    Scope scope() default Scope.SINGLETON;
+
+    enum Scope {
+        SINGLETON,
+        PROTOTYPE;
+
+        public boolean isSingleton() {
+            return this.equals(Scope.SINGLETON);
+        }
+    }
 }

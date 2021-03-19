@@ -4,7 +4,7 @@ import br.com.container.aplicacao.usuario.Usuario;
 import br.com.container.aplicacao.usuario.services.UsuarioService;
 import br.com.container.framework.annotations.Component;
 
-@Component
+@Component(scope = Component.Scope.PROTOTYPE)
 public class UsuarioController {
 
     private final UsuarioService service;

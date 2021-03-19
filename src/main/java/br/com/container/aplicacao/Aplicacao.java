@@ -8,8 +8,10 @@ public class Aplicacao {
     public static void main(String... args) {
         Container container = Container.getInstance(Aplicacao.class);
 
-        var controller = container.get(UsuarioController.class);
+        var controller1 = container.get(UsuarioController.class);
+        controller1.criar();
 
-        controller.criar();
+        var controller2 = container.get(UsuarioController.class);
+        controller2.criar();
     }
 }
